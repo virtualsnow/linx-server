@@ -146,8 +146,8 @@ Development
 Any help is welcome, PRs will be reviewed and merged accordingly.  
 The official IRC channel is #linx on irc.oftc.net  
 
-1. ```go get -u github.com/andreimarcu/linx-server ```
-2. ```cd $GOPATH/src/github.com/andreimarcu/linx-server ```
+1. ```go get -v -u github.com/virtualsnow/linx-server ```
+2. ```cd $GOPATH/src/github.com/virtualsnow/linx-server ```
 3. ```go build && ./linx-server```
 
 

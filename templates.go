@@ -61,9 +61,9 @@ func populateTemplatesMap(tSet *pongo2.TemplateSet, tMap map[string]*pongo2.Temp
 		"display/md.html",
 		"display/file.html",
 	}
-
+	var baseDir = "linx/"
 	for _, tName := range templates {
-		tpl, err := tSet.FromFile(tName)
+		tpl, err := tSet.FromFile(baseDir+tName)
 		if err != nil {
 			return err
 		}
@@ -81,7 +81,7 @@ func renderTemplate(tpl *pongo2.Template, context pongo2.Context, r *http.Reques
 	} else {
 		context["sitename"] = Config.siteName
 	}
-
+	context["STATIC_PREFIX"] = "/static/"
 	context["sitepath"] = Config.sitePath
 	context["selifpath"] = Config.selifPath
 	context["using_auth"] = Config.authFile != ""
